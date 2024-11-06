@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://ru1vtl7xhot"]
+
+[ext_resource type="Texture2D" uid="uid://bngfh7nslvij1" path="res://assets/addons/sprout_lands_tilemap/assets/Tilesets/Grass.png" id="1_y72to"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_777y4"]
+size = Vector2(60, 12)
+
+[node name="Platform" type="AnimatableBody2D"]
+
+[node name="Grass" type="Sprite2D" parent="."]
+texture = ExtResource("1_y72to")
+region_enabled = true
+region_rect = Rect2(2, 98, 60, 12)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_777y4")
+one_way_collision = true
